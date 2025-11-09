@@ -78,6 +78,7 @@ INSERT INTO sales VALUES
 ('2021-02-12', 'HM02', 3, 'Pen', 2, 20);
 ALTER TABLE sales ADD COLUMN S_no INT, ADD COLUMN categories VARCHAR(50);
 ALTER TABLE product MODIFY stock VARCHAR(20);
+DROP TABLE IF EXISTS customer_details;
 RENAME TABLE customer TO customer_details;
 ALTER TABLE sales DROP COLUMN S_no, DROP COLUMN categories;
 SELECT order_number AS order_id, sale_date AS order_date, price, quantity FROM sales;
